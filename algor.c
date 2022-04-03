@@ -14,7 +14,7 @@ struct  sightings{
 int main (void)
 {
 
-	/*sightings allSights[10];*/
+	struct sightings allSights[10];
 
 	struct sightings sight1;
 
@@ -23,17 +23,20 @@ int main (void)
 	strcpy(sight1.country,"UK");
 	strcpy(sight1.shape,"Sphere");
 
+	allSights[0]=sight1;
+
+
 			
 	system("clear");	
 			
 	printf(	"\n\nDate of sighting	Location	Country		Shape \n"); 	
 	printf("------------------------------------------------------------------\n");
-	printf(" %s		%s	",sight1.datetime,sight1.location);
+	printf(" %s		%s	",allSights[0].datetime,sight1.location);
 	printf(" %s	%s\n\n",sight1.country,sight1.shape);
 
 
 
-printf("%s", sight1.country);
+
 
 	return 1;
 }
